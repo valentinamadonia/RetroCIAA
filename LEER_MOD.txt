@@ -1,0 +1,10 @@
+12/4/18
+
+Modifique la hora inicial en rtc.c y el nombre de la red wifi en xxxwifi.h
+
+hacer 
+
+make clean
+make generate
+make 
+make download
