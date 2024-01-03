@@ -67,6 +67,7 @@ z80.o: projects\speecy\src\z80.c projects\speecy\inc/tables.h \
  projects/ILI9341/inc/tm_stm32f4_fonts.h projects/drivers_bm/inc/adc.h \
  projects/drivers_bm/inc/uart.h projects\speecy\inc/mem.h \
  projects\speecy\inc/macros.h projects\speecy\inc/snafile_pacman.h \
- projects\speecy\inc/opcodes.h projects\speecy\inc/op_cb.h \
- projects\speecy\inc/op_ed.h projects\speecy\inc/op_dd_fd.h \
- projects\speecy\inc/opddfdcb.h projects\speecy\inc/macros.h
+ projects\speecy\inc/snafile_Commando.h projects\speecy\inc/opcodes.h \
+ projects\speecy\inc/op_cb.h projects\speecy\inc/op_ed.h \
+ projects\speecy\inc/op_dd_fd.h projects\speecy\inc/opddfdcb.h \
+ projects\speecy\inc/macros.h

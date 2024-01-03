@@ -177,7 +177,7 @@ void Z80Reset (register Z80Regs * regs, int);
 void Z80FlagTables (void);
 word ParseOpcode (char *, char *, char *, word, Z80Regs *);
 word Z80Dissasembler (Z80Regs *, char *, char *);
-void load_sna(Z80Regs *);
+void load_sna(Z80Regs *,int);
 
 
 #endif	/*  */

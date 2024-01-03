@@ -416,7 +416,7 @@ void init_keyboard(void){
  UpdateKeyboard( void );
  Updates the keyboard variables used on the return of IN function.
 ------------------------------------------------------------------*/
-void UpdateKeyboard (void)
+void UpdateKeyboard (int option)
 {
 /*=== This adds the row/column/data value for each key on spectrum kerb ===*/
 #define NUM_KEYB_KEYS 256
@@ -463,7 +463,8 @@ void UpdateKeyboard (void)
 //  while(readByte_UART_USB_EDUCIAA()!=0);	/* Vaciar buffer entrada UART		 */
   unsigned char serial_in;
   //serial_in=readByte_UART_USB_EDUCIAA();
-  serial_in=UpdateBotones();
+  if(option==1) serial_in=UpdateBotonesOpcion1();
+  else serial_in=UpdateBotonesOpcion2();
   //UpdateBotones();
   if (serial_in!=0)
   {

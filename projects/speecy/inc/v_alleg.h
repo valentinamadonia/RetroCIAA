@@ -113,6 +113,7 @@ void gInitSound (void);
 
 // keyboard functions
 void init_keyboard(void);
-void UpdateKeyboard (void);
+
+void UpdateKeyboard (int);
 
 #endif	/* v_alleg.h */ 

@@ -61,4 +61,7 @@ botones.o: projects\speecy\src\botones.c \
  externals/drivers/cortexM4/lpc43xx/inc/i2cm_18xx_43xx.h \
  externals/drivers/cortexM4/lpc43xx/inc/fpu_init.h \
  projects\speecy\inc/botones.h modules/base/inc/ciaaPOSIX_stdbool.h \
- projects/drivers_bm/inc/led.h
+ projects/drivers_bm/inc/led.h projects/ILI9341/inc/ILI9341.h \
+ projects/ILI9341/inc/tm_stm32f4_ili9341.h \
+ projects/ILI9341/inc/tm_stm32f4_fonts.h \
+ projects/ILI9341/inc/tm_stm32f4_fonts.h

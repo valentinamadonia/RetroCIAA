@@ -65,4 +65,5 @@ main.o: projects\speecy\src\main.c projects\speecy\inc/vector.h \
  projects/ILI9341/inc/tm_stm32f4_fonts.h projects/drivers_bm/inc/adc.h \
  projects/drivers_bm/inc/uart.h projects\speecy\inc/z80.h \
  projects\speecy\inc/mem.h projects\speecy\inc/graphics.h \
- projects\speecy\inc/botones.h projects/drivers_bm/inc/led.h
+ projects\speecy\inc/botones.h projects/drivers_bm/inc/led.h \
+ projects\speecy\inc/v_alleg.h

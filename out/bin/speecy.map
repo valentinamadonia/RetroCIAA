@@ -1,5 +1,7 @@
 Archive member included because of file (symbol)
 
+./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                              ./out/obj/botones.o (TM_Font_7x10)
 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
                               ./out/obj/graphics.o (TM_ILI9341_Init)
 ./out/lib/drivers_ILI9341_bm.a(spi.o)
@@ -268,7 +270,7 @@ Discarded input sections
  .text.v_initmouse
                 0x00000000        0xc ./out/obj/v_alleg.o
  .text.galert   0x00000000       0x1c ./out/obj/v_alleg.o
- .data.teclas_fila.10847
+ .data.teclas_fila.10854
                 0x00000000      0x300 ./out/obj/v_alleg.o
  .debug_macro   0x00000000      0x868 ./out/obj/v_alleg.o
  .debug_macro   0x00000000       0x58 ./out/obj/v_alleg.o
@@ -439,9 +441,9 @@ Discarded input sections
  .text.GFXprintf_tovideo
                 0x00000000       0x80 ./out/obj/graphics.o
  .text.GFXgets  0x00000000      0x1a4 ./out/obj/graphics.o
- .bss.f_flash2.10597
+ .bss.f_flash2.10598
                 0x00000000        0x4 ./out/obj/graphics.o
- .data.f_flash.10596
+ .data.f_flash.10597
                 0x00000000        0x4 ./out/obj/graphics.o
  .debug_macro   0x00000000      0x868 ./out/obj/graphics.o
  .debug_macro   0x00000000       0x58 ./out/obj/graphics.o
@@ -595,11 +597,18 @@ Discarded input sections
  .group         0x00000000        0x8 ./out/obj/botones.o
  .group         0x00000000        0x8 ./out/obj/botones.o
  .group         0x00000000        0x8 ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/botones.o
  .text          0x00000000        0x0 ./out/obj/botones.o
  .data          0x00000000        0x0 ./out/obj/botones.o
  .bss           0x00000000        0x0 ./out/obj/botones.o
- .text.Leer_Estado_Boton
-                0x00000000       0x68 ./out/obj/botones.o
+ .text.Chip_GPIO_SetPinOutLow
+                0x00000000       0x30 ./out/obj/botones.o
+ .text.Apagar_Led
+                0x00000000       0x14 ./out/obj/botones.o
  .debug_macro   0x00000000      0x868 ./out/obj/botones.o
  .debug_macro   0x00000000       0x16 ./out/obj/botones.o
  .debug_macro   0x00000000       0x10 ./out/obj/botones.o
@@ -646,7 +655,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xd0 ./out/obj/botones.o
  .debug_macro   0x00000000       0x22 ./out/obj/botones.o
  .debug_macro   0x00000000       0x40 ./out/obj/botones.o
- .debug_macro   0x00000000       0xc4 ./out/obj/botones.o
+ .debug_macro   0x00000000       0xbe ./out/obj/botones.o
  .debug_macro   0x00000000       0x58 ./out/obj/botones.o
  .debug_macro   0x00000000       0x35 ./out/obj/botones.o
  .debug_macro   0x00000000       0xa2 ./out/obj/botones.o
@@ -663,6 +672,12 @@ Discarded input sections
  .debug_macro   0x00000000       0xbd ./out/obj/botones.o
  .debug_macro   0x00000000       0x16 ./out/obj/botones.o
  .debug_macro   0x00000000      0x16c ./out/obj/botones.o
+ .debug_macro   0x00000000      0x2a6 ./out/obj/botones.o
+ .debug_macro   0x00000000       0x10 ./out/obj/botones.o
+ .debug_macro   0x00000000       0x35 ./out/obj/botones.o
+ .debug_macro   0x00000000       0x1f ./out/obj/botones.o
+ .debug_macro   0x00000000       0x7b ./out/obj/botones.o
+ .group         0x00000000        0x8 ./out/obj/main.o
  .group         0x00000000        0x8 ./out/obj/main.o
  .group         0x00000000        0x8 ./out/obj/main.o
  .group         0x00000000        0x8 ./out/obj/main.o
@@ -828,8 +843,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x84 ./out/obj/main.o
  .debug_macro   0x00000000       0x34 ./out/obj/main.o
  .debug_macro   0x00000000       0x10 ./out/obj/main.o
- .debug_macro   0x00000000       0xc4 ./out/obj/main.o
+ .debug_macro   0x00000000       0xbe ./out/obj/main.o
  .debug_macro   0x00000000       0x3a ./out/obj/main.o
+ .debug_macro   0x00000000      0x1b4 ./out/obj/main.o
  .group         0x00000000        0x8 ./out/obj/mem.o
  .group         0x00000000        0x8 ./out/obj/mem.o
  .group         0x00000000        0x8 ./out/obj/mem.o
@@ -1001,6 +1017,46 @@ Discarded input sections
  .data          0x00000000        0x0 ./out/obj/crp.o
  .bss           0x00000000        0x0 ./out/obj/crp.o
  .debug_macro   0x00000000      0x868 ./out/obj/crp.o
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .text          0x00000000        0x0 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .data          0x00000000        0x0 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .bss           0x00000000        0x0 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .rodata.TM_Font28x28
+                0x00000000      0x700 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .data.TM_Font_28x28
+                0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .text.TM_FONTS_GetStringSize
+                0x00000000       0x3c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000      0x868 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x16 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x44 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000      0x209 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x58 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x35 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0xa2 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x52 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x16 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x43 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000      0x180 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000      0x2a6 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x10 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x35 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00000000       0x1f ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
  .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .group         0x00000000        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
@@ -1074,12 +1130,8 @@ Discarded input sections
                 0x00000000        0xc ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.TM_ILI9341_DisplayOff
                 0x00000000        0xc ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .text.TM_ILI9341_Puts
-                0x00000000       0xb4 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.TM_ILI9341_GetStringSize
                 0x00000000       0x48 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .text.TM_ILI9341_Putc
-                0x00000000      0x12c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.TM_ILI9341_DrawRectangle
                 0x00000000       0x54 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.TM_ILI9341_DrawFilledRectangle
@@ -1142,6 +1194,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x58 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_macro   0x00000000       0x35 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_macro   0x00000000       0xa2 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_macro   0x00000000      0x166 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_macro   0x00000000       0x52 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_macro   0x00000000       0x16 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_macro   0x00000000       0x43 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
@@ -2342,7 +2395,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000    0x24098
+.text           0x1a000000    0x356d0
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -2351,24 +2404,24 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a024098 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a0356d0 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
-                0x1a00011c        0x4 LONG 0xcc SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a024098 LOADADDR (.data_RAM2)
+                0x1a00011c        0x4 LONG 0xe4 SIZEOF (.data)
+                0x1a000120        0x4 LONG 0x1a0356d0 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a024098 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a0356d0 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a024098 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a0356d0 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a024098 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a0356d0 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
                 0x1a000150                __bss_section_table = .
-                0x1a000150        0x4 LONG 0x100000cc ADDR (.bss)
+                0x1a000150        0x4 LONG 0x100000e4 ADDR (.bss)
                 0x1a000154        0x4 LONG 0xa94 SIZEOF (.bss)
                 0x1a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x1a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
@@ -2423,299 +2476,329 @@ END GROUP
                 0x1a01117c       0xc0 ./out/obj/z80.o
                 0x1a01117c                Z80FlagTables
  .text.load_sna
-                0x1a01123c      0x150 ./out/obj/z80.o
+                0x1a01123c      0x29c ./out/obj/z80.o
                 0x1a01123c                load_sna
  .text.init_keyboard
-                0x1a01138c       0x50 ./out/obj/v_alleg.o
-                0x1a01138c                init_keyboard
+                0x1a0114d8       0x50 ./out/obj/v_alleg.o
+                0x1a0114d8                init_keyboard
  .text.UpdateKeyboard
-                0x1a0113dc      0x310 ./out/obj/v_alleg.o
-                0x1a0113dc                UpdateKeyboard
+                0x1a011528      0x32c ./out/obj/v_alleg.o
+                0x1a011528                UpdateKeyboard
  .text.DisplayScreenDiff
-                0x1a0116ec       0xc8 ./out/obj/graphics.o
-                0x1a0116ec                DisplayScreenDiff
+                0x1a011854       0xc8 ./out/obj/graphics.o
+                0x1a011854                DisplayScreenDiff
  .text.displayscanlineDiff
-                0x1a0117b4      0x34c ./out/obj/graphics.o
-                0x1a0117b4                displayscanlineDiff
+                0x1a01191c      0x34c ./out/obj/graphics.o
+                0x1a01191c                displayscanlineDiff
  .text.displayborderscanline
-                0x1a011b00       0x3c ./out/obj/graphics.o
-                0x1a011b00                displayborderscanline
+                0x1a011c68       0x3c ./out/obj/graphics.o
+                0x1a011c68                displayborderscanline
  .text.ClearScreen
-                0x1a011b3c       0x20 ./out/obj/graphics.o
-                0x1a011b3c                ClearScreen
+                0x1a011ca4       0x20 ./out/obj/graphics.o
+                0x1a011ca4                ClearScreen
  .text.Chip_SCU_PinMuxSet
-                0x1a011b5c       0x30 ./out/obj/botones.o
+                0x1a011cc4       0x30 ./out/obj/botones.o
  .text.Chip_SCU_PinMux
-                0x1a011b8c       0x2c ./out/obj/botones.o
+                0x1a011cf4       0x2c ./out/obj/botones.o
  .text.Chip_GPIO_ReadPortBit
-                0x1a011bb8       0x34 ./out/obj/botones.o
+                0x1a011d20       0x34 ./out/obj/botones.o
+ .text.Chip_GPIO_SetPinOutHigh
+                0x1a011d54       0x30 ./out/obj/botones.o
  .text.Inicializar_Botones
-                0x1a011bec       0xa8 ./out/obj/botones.o
-                0x1a011bec                Inicializar_Botones
- .text.UpdateBotones
-                0x1a011c94       0xb0 ./out/obj/botones.o
-                0x1a011c94                UpdateBotones
+                0x1a011d84       0xc0 ./out/obj/botones.o
+                0x1a011d84                Inicializar_Botones
+ .text.Prender_Led
+                0x1a011e44       0x14 ./out/obj/botones.o
+                0x1a011e44                Prender_Led
+ .text.UpdateBotonesOpcion1
+                0x1a011e58       0x7c ./out/obj/botones.o
+                0x1a011e58                UpdateBotonesOpcion1
+ .text.UpdateBotonesOpcion2
+                0x1a011ed4       0x7c ./out/obj/botones.o
+                0x1a011ed4                UpdateBotonesOpcion2
+ .text.Menu     0x1a011f50       0xf8 ./out/obj/botones.o
+                0x1a011f50                Menu
+ .text.Chip_GPIO_ReadPortBit
+                0x1a012048       0x34 ./out/obj/main.o
  .text.Z80Initialization
-                0x1a011d44       0x30 ./out/obj/main.o
-                0x1a011d44                Z80Initialization
- .text.main     0x1a011d74      0x200 ./out/obj/main.o
-                0x1a011d74                main
- .text.readmem  0x1a011f74       0x60 ./out/obj/mem.o
-                0x1a011f74                readmem
+                0x1a01207c       0x30 ./out/obj/main.o
+                0x1a01207c                Z80Initialization
+ .text.main     0x1a0120ac      0x294 ./out/obj/main.o
+                0x1a0120ac                main
+ .text.readmem  0x1a012340       0x60 ./out/obj/mem.o
+                0x1a012340                readmem
  .text.writemem
-                0x1a011fd4       0x4c ./out/obj/mem.o
-                0x1a011fd4                writemem
+                0x1a0123a0       0x4c ./out/obj/mem.o
+                0x1a0123a0                writemem
  .text.init_spectrum
-                0x1a012020       0x10 ./out/obj/mem.o
-                0x1a012020                init_spectrum
+                0x1a0123ec       0x10 ./out/obj/mem.o
+                0x1a0123ec                init_spectrum
  .text.init_48k
-                0x1a012030      0x194 ./out/obj/mem.o
-                0x1a012030                init_48k
+                0x1a0123fc      0x194 ./out/obj/mem.o
+                0x1a0123fc                init_48k
  .text.Chip_SCU_PinMuxSet
-                0x1a0121c4       0x30 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012590       0x30 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.Chip_SCU_PinMux
-                0x1a0121f4       0x2c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a0125c0       0x2c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.Chip_GPIO_SetValue
-                0x1a012220       0x28 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a0125ec       0x28 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.Chip_GPIO_ClearValue
-                0x1a012248       0x28 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012614       0x28 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .text.TM_ILI9341_Init
-                0x1a012270       0xb0 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012270                TM_ILI9341_Init
+                0x1a01263c       0xb0 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a01263c                TM_ILI9341_Init
  .text.TM_ILI9341_InitLCD
-                0x1a012320      0x274 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012320                TM_ILI9341_InitLCD
+                0x1a0126ec      0x274 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a0126ec                TM_ILI9341_InitLCD
  .text.TM_ILI9341_SendCommand
-                0x1a012594       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012594                TM_ILI9341_SendCommand
+                0x1a012960       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012960                TM_ILI9341_SendCommand
  .text.TM_ILI9341_SendData
-                0x1a0125d4       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a0125d4                TM_ILI9341_SendData
+                0x1a0129a0       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a0129a0                TM_ILI9341_SendData
  .text.TM_ILI9341_DrawPixel
-                0x1a012614       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012614                TM_ILI9341_DrawPixel
+                0x1a0129e0       0x40 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a0129e0                TM_ILI9341_DrawPixel
  .text.TM_ILI9341_SetCursorPosition
-                0x1a012654       0x80 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012654                TM_ILI9341_SetCursorPosition
+                0x1a012a20       0x80 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012a20                TM_ILI9341_SetCursorPosition
  .text.TM_ILI9341_Fill
-                0x1a0126d4       0x2c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a0126d4                TM_ILI9341_Fill
+                0x1a012aa0       0x2c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012aa0                TM_ILI9341_Fill
  .text.TM_ILI9341_INT_Fill
-                0x1a012700       0x98 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012700                TM_ILI9341_INT_Fill
+                0x1a012acc       0x98 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012acc                TM_ILI9341_INT_Fill
  .text.TM_ILI9341_Delay
-                0x1a012798       0x20 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012798                TM_ILI9341_Delay
+                0x1a012b64       0x20 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012b64                TM_ILI9341_Delay
  .text.TM_ILI9341_Rotate
-                0x1a0127b8       0x88 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a0127b8                TM_ILI9341_Rotate
+                0x1a012b84       0x88 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012b84                TM_ILI9341_Rotate
+ .text.TM_ILI9341_Puts
+                0x1a012c0c       0xb4 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012c0c                TM_ILI9341_Puts
+ .text.TM_ILI9341_Putc
+                0x1a012cc0      0x12c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012cc0                TM_ILI9341_Putc
  .text.TM_ILI9341_DrawLine
-                0x1a012840      0x174 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x1a012840                TM_ILI9341_DrawLine
+                0x1a012dec      0x174 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x1a012dec                TM_ILI9341_DrawLine
  .text.Chip_SCU_PinMuxSet
-                0x1a0129b4       0x30 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a012f60       0x30 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .text.Chip_SSP_Enable
-                0x1a0129e4       0x20 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a012f90       0x20 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .text.Chip_SSP_SetFormat
-                0x1a012a04       0x30 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a012fb0       0x30 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .text.Board_SSP_Init
-                0x1a012a34       0x24 ./out/lib/drivers_ILI9341_bm.a(spi.o)
-                0x1a012a34                Board_SSP_Init
+                0x1a012fe0       0x24 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a012fe0                Board_SSP_Init
  .text.Board_SSP_config
-                0x1a012a58       0x90 ./out/lib/drivers_ILI9341_bm.a(spi.o)
-                0x1a012a58                Board_SSP_config
+                0x1a013004       0x90 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a013004                Board_SSP_config
  .text.write_spi_XXh
-                0x1a012ae8       0x28 ./out/lib/drivers_ILI9341_bm.a(spi.o)
-                0x1a012ae8                write_spi_XXh
+                0x1a013094       0x28 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x1a013094                write_spi_XXh
  .text.Chip_GPIO_Init
-                0x1a012b10       0x14 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
-                0x1a012b10                Chip_GPIO_Init
+                0x1a0130bc       0x14 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+                0x1a0130bc                Chip_GPIO_Init
  .text.Chip_GPIO_SetDir
-                0x1a012b24       0x5c ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
-                0x1a012b24                Chip_GPIO_SetDir
+                0x1a0130d0       0x5c ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+                0x1a0130d0                Chip_GPIO_SetDir
  .text.Chip_SSP_GetStatus
-                0x1a012b80       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a01312c       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_GetRawIntStatus
-                0x1a012bac       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013158       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_GetDataSize
-                0x1a012bd8       0x20 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013184       0x20 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_ClearIntPending
-                0x1a012bf8       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0131a4       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_ReceiveFrame
-                0x1a012c14       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0131c0       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_SendFrame
-                0x1a012c30       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0131dc       0x1c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_SetFormat
-                0x1a012c4c       0x30 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0131f8       0x30 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_Set_Mode
-                0x1a012c7c       0x24 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013228       0x24 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_GetClockIndex
-                0x1a012ca0       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a01324c       0x2c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_GetPeriphClockIndex
-                0x1a012ccc       0x30 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013278       0x30 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .text.Chip_SSP_SetClockRate
-                0x1a012cfc       0x34 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
-                0x1a012cfc                Chip_SSP_SetClockRate
+                0x1a0132a8       0x34 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0132a8                Chip_SSP_SetClockRate
  .text.Chip_SSP_WriteFrames_Blocking
-                0x1a012d30      0x138 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
-                0x1a012d30                Chip_SSP_WriteFrames_Blocking
+                0x1a0132dc      0x138 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a0132dc                Chip_SSP_WriteFrames_Blocking
  .text.Chip_SSP_SetBitRate
-                0x1a012e68       0x74 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
-                0x1a012e68                Chip_SSP_SetBitRate
+                0x1a013414       0x74 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013414                Chip_SSP_SetBitRate
  .text.Chip_SSP_Init
-                0x1a012edc       0x4c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
-                0x1a012edc                Chip_SSP_Init
+                0x1a013488       0x4c ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x1a013488                Chip_SSP_Init
  .text.ResetISR
-                0x1a012f28       0xe4 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
-                0x1a012f28                ResetISR
- .text.ABS      0x1a01300c       0x24 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0134d4       0xe4 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+                0x1a0134d4                ResetISR
+ .text.ABS      0x1a0135b8       0x24 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .text.pll_calc_divs
-                0x1a013030      0x11c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0135dc      0x11c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .text.pll_get_frac
-                0x1a01314c      0x178 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0136f8      0x178 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .text.Chip_Clock_GetDivRate
-                0x1a0132c4       0x40 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013870       0x40 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .text.Chip_Clock_FindBaseClock
-                0x1a013304       0x88 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0138b0       0x88 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x1a01338c       0x6c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a01338c                Chip_Clock_EnableCrystal
+                0x1a013938       0x6c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013938                Chip_Clock_EnableCrystal
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a0133f8       0xd4 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a0133f8                Chip_Clock_CalcMainPLLValue
+                0x1a0139a4       0xd4 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0139a4                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a0134cc       0xc0 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a0134cc                Chip_Clock_GetMainPLLHz
+                0x1a013a78       0xc0 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013a78                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDividerSource
-                0x1a01358c       0x40 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a01358c                Chip_Clock_GetDividerSource
+                0x1a013b38       0x40 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013b38                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a0135cc       0x38 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a0135cc                Chip_Clock_GetDividerDivisor
+                0x1a013b78       0x38 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013b78                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a013604      0x140 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a013604                Chip_Clock_GetClockInputHz
+                0x1a013bb0      0x140 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013bb0                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a013744       0x24 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a013744                Chip_Clock_GetBaseClocktHz
+                0x1a013cf0       0x24 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013cf0                Chip_Clock_GetBaseClocktHz
  .text.Chip_Clock_SetBaseClock
-                0x1a013768       0x8c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a013768                Chip_Clock_SetBaseClock
+                0x1a013d14       0x8c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013d14                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a0137f4       0x4c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a0137f4                Chip_Clock_GetBaseClock
+                0x1a013da0       0x4c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013da0                Chip_Clock_GetBaseClock
  .text.Chip_Clock_EnableOpts
-                0x1a013840       0x7c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a013840                Chip_Clock_EnableOpts
+                0x1a013dec       0x7c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013dec                Chip_Clock_EnableOpts
  .text.Chip_Clock_Enable
-                0x1a0138bc       0x60 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a0138bc                Chip_Clock_Enable
+                0x1a013e68       0x60 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013e68                Chip_Clock_Enable
  .text.Chip_Clock_GetRate
-                0x1a01391c       0x88 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
-                0x1a01391c                Chip_Clock_GetRate
+                0x1a013ec8       0x88 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a013ec8                Chip_Clock_GetRate
  .text.SystemInit
-                0x1a0139a4       0x1c ./out/lib/ext_drivers.a(sysinit.o)
-                0x1a0139a4                SystemInit
- .text.fpuInit  0x1a0139c0       0x74 ./out/lib/ext_drivers.a(fpu_init.o)
-                0x1a0139c0                fpuInit
+                0x1a013f50       0x1c ./out/lib/ext_drivers.a(sysinit.o)
+                0x1a013f50                SystemInit
+ .text.fpuInit  0x1a013f6c       0x74 ./out/lib/ext_drivers.a(fpu_init.o)
+                0x1a013f6c                fpuInit
  .text.Chip_Clock_DisableMainPLL
-                0x1a013a34       0x1c ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a013fe0       0x1c ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_SetupMainPLL
-                0x1a013a50       0x40 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a013ffc       0x40 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_MainPLLLocked
-                0x1a013a90       0x24 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a01403c       0x24 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .text.Chip_SetupCoreClock
-                0x1a013ab4      0x15c ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
-                0x1a013ab4                Chip_SetupCoreClock
+                0x1a014060      0x15c ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a014060                Chip_SetupCoreClock
  .text.Chip_SetupIrcClocking
-                0x1a013c10       0x14 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
-                0x1a013c10                Chip_SetupIrcClocking
+                0x1a0141bc       0x14 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a0141bc                Chip_SetupIrcClocking
  .text.Chip_SystemInit
-                0x1a013c24        0xc ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
-                0x1a013c24                Chip_SystemInit
+                0x1a0141d0        0xc ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a0141d0                Chip_SystemInit
  .text.Chip_SCU_PinMuxSet
-                0x1a013c30       0x30 ./out/lib/drivers_bm.a(uart.o)
+                0x1a0141dc       0x30 ./out/lib/drivers_bm.a(uart.o)
  .text.Chip_SCU_PinMux
-                0x1a013c60       0x2c ./out/lib/drivers_bm.a(uart.o)
+                0x1a01420c       0x2c ./out/lib/drivers_bm.a(uart.o)
  .text.Chip_UART_TXEnable
-                0x1a013c8c       0x18 ./out/lib/drivers_bm.a(uart.o)
+                0x1a014238       0x18 ./out/lib/drivers_bm.a(uart.o)
  .text.Chip_UART_SetupFIFOS
-                0x1a013ca4       0x1c ./out/lib/drivers_bm.a(uart.o)
+                0x1a014250       0x1c ./out/lib/drivers_bm.a(uart.o)
  .text.init_UART_FTDI_EDUCIAA
-                0x1a013cc0       0x44 ./out/lib/drivers_bm.a(uart.o)
-                0x1a013cc0                init_UART_FTDI_EDUCIAA
+                0x1a01426c       0x44 ./out/lib/drivers_bm.a(uart.o)
+                0x1a01426c                init_UART_FTDI_EDUCIAA
  .text.Chip_UART_TXDisable
-                0x1a013d04       0x18 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0142b0       0x18 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetupFIFOS
-                0x1a013d1c       0x1c ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0142c8       0x1c ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_ConfigData
-                0x1a013d38       0x1c ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0142e4       0x1c ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x1a013d54       0x20 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a014300       0x20 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x1a013d74       0x20 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a014320       0x20 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x1a013d94       0x28 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a014340       0x28 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_GetIndex
-                0x1a013dbc       0x60 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a014368       0x60 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .text.Chip_UART_Init
-                0x1a013e1c       0x84 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
-                0x1a013e1c                Chip_UART_Init
+                0x1a0143c8       0x84 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0143c8                Chip_UART_Init
  .text.Chip_UART_SetBaud
-                0x1a013ea0       0x70 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
-                0x1a013ea0                Chip_UART_SetBaud
- .text.memset   0x1a013f10       0x94 c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
-                0x1a013f10                memset
+                0x1a01444c       0x70 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a01444c                Chip_UART_SetBaud
+ .text.memset   0x1a0144bc       0x94 c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
+                0x1a0144bc                memset
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.snafile
-                0x1a013fa4     0xc01c ./out/obj/z80.o
+                0x1a014550     0xc01c ./out/obj/z80.o
+ .rodata.snafileB
+                0x1a02056c     0xc01c ./out/obj/z80.o
+ .rodata        0x1a02c588       0x48 ./out/obj/botones.o
  .rodata.spectrum_rom
-                0x1a01ffc0     0x4000 ./out/obj/mem.o
+                0x1a02c5d0     0x4000 ./out/obj/mem.o
+ .rodata.TM_Font7x10
+                0x1a0305d0      0xed8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x1a0305d0                TM_Font7x10
+ .rodata.TM_Font11x18
+                0x1a0314a8     0x1ab8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x1a0314a8                TM_Font11x18
+ .rodata.TM_Font16x26
+                0x1a032f60     0x2698 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x1a032f60                TM_Font16x26
  .rodata.periph_to_base
-                0x1a023fc0       0x6c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .rodata        0x1a02402c        0xc ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x1a0355f8       0x6c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .rodata        0x1a035664        0xc ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .rodata.ExtRateIn
-                0x1a024038        0x4 ./out/lib/ext_drivers.a(sysinit.o)
-                0x1a024038                ExtRateIn
+                0x1a035670        0x4 ./out/lib/ext_drivers.a(sysinit.o)
+                0x1a035670                ExtRateIn
  .rodata.OscRateIn
-                0x1a02403c        0x4 ./out/lib/ext_drivers.a(sysinit.o)
-                0x1a02403c                OscRateIn
+                0x1a035674        0x4 ./out/lib/ext_drivers.a(sysinit.o)
+                0x1a035674                OscRateIn
  .rodata.InitClkStates
-                0x1a024040       0x48 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x1a035678       0x48 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a024088        0x8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0356c0        0x8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a024090        0x8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
-                0x1a024098                . = ALIGN (0x4)
+                0x1a0356c8        0x8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x1a0356d0                . = ALIGN (0x4)
 
-.glue_7         0x1a024098        0x0
+.glue_7         0x1a0356d0        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x1a024098        0x0
+.glue_7t        0x1a0356d0        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x1a024098        0x0
+.vfp11_veneer   0x1a0356d0        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x1a024098        0x0
+.v4_bx          0x1a0356d0        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x1a024098        0x0
+.iplt           0x1a0356d0        0x0
  .iplt          0x00000000        0x0 ./out/obj/z80.o
 
-.rel.dyn        0x1a024098        0x0
+.rel.dyn        0x1a0356d0        0x0
  .rel.iplt      0x00000000        0x0 ./out/obj/z80.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a024098                __exidx_start = .
+                0x1a0356d0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a024098                __exidx_end = .
-                0x1a024098                _etext = .
+                0x1a0356d0                __exidx_end = .
+                0x1a0356d0                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a024098
+.data_RAM2      0x10080000        0x0 load address 0x1a0356d0
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamLoc40)
@@ -2723,7 +2806,7 @@ END GROUP
  *(.data.$RamLoc40*)
                 0x10080000                . = ALIGN (0x4)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a024098
+.data_RAM3      0x20000000        0x0 load address 0x1a0356d0
  FILL mask 0xff
  *(.ramfunc.$RAM3)
  *(.ramfunc.$RamAHB32)
@@ -2731,7 +2814,7 @@ END GROUP
  *(.data.$RamAHB32*)
                 0x20000000                . = ALIGN (0x4)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a024098
+.data_RAM4      0x20008000        0x0 load address 0x1a0356d0
  FILL mask 0xff
  *(.ramfunc.$RAM4)
  *(.ramfunc.$RamAHB16)
@@ -2739,7 +2822,7 @@ END GROUP
  *(.data.$RamAHB16*)
                 0x20008000                . = ALIGN (0x4)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a024098
+.data_RAM5      0x2000c000        0x0 load address 0x1a0356d0
  FILL mask 0xff
  *(.ramfunc.$RAM5)
  *(.ramfunc.$RamAHB_ETB16)
@@ -2753,7 +2836,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000       0xcc load address 0x1a024098
+.data           0x10000000       0xe4 load address 0x1a0356d0
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -2773,7 +2856,7 @@ END GROUP
                 0x10000018                overflow_sub_table
  .data.paletaILI
                 0x10000020       0x40 ./out/obj/graphics.o
- .data.f_flash.10612
+ .data.f_flash.10613
                 0x10000060        0x4 ./out/obj/graphics.o
  .data.hwopt    0x10000064       0x5c ./out/obj/main.o
                 0x10000064                hwopt
@@ -2782,12 +2865,21 @@ END GROUP
  .data.v_border
                 0x100000c4        0x4 ./out/obj/main.o
                 0x100000c4                v_border
- .data.f_flash.10647
+ .data.f_flash.10738
                 0x100000c8        0x4 ./out/obj/main.o
-                0x100000cc                . = ALIGN (0x4)
-                0x100000cc                _edata = .
+ .data.TM_Font_7x10
+                0x100000cc        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x100000cc                TM_Font_7x10
+ .data.TM_Font_11x18
+                0x100000d4        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x100000d4                TM_Font_11x18
+ .data.TM_Font_16x26
+                0x100000dc        0x8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                0x100000dc                TM_Font_16x26
+                0x100000e4                . = ALIGN (0x4)
+                0x100000e4                _edata = .
 
-.igot.plt       0x100000cc        0x0 load address 0x1a024164
+.igot.plt       0x100000e4        0x0 load address 0x1a0357b4
  .igot.plt      0x00000000        0x0 ./out/obj/z80.o
 
 .bss_RAM2       0x10080000        0x0
@@ -2810,51 +2902,51 @@ END GROUP
  *(.bss.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.bss            0x100000cc      0xa94
-                0x100000cc                _bss = .
+.bss            0x100000e4      0xa94
+                0x100000e4                _bss = .
  *(.bss*)
  .bss.last_borde
-                0x100000cc        0x1 ./out/obj/graphics.o
-                0x100000cc                last_borde
- *fill*         0x100000cd        0x3 
- .bss.f_flash2.10613
-                0x100000d0        0x4 ./out/obj/graphics.o
- .bss.scanl     0x100000d4        0x4 ./out/obj/main.o
-                0x100000d4                scanl
- .bss.skip      0x100000d8        0x4 ./out/obj/main.o
-                0x100000d8                skip
- .bss.f_flash2.10648
-                0x100000dc        0x4 ./out/obj/main.o
+                0x100000e4        0x1 ./out/obj/graphics.o
+                0x100000e4                last_borde
+ *fill*         0x100000e5        0x3 
+ .bss.f_flash2.10614
+                0x100000e8        0x4 ./out/obj/graphics.o
+ .bss.scanl     0x100000ec        0x4 ./out/obj/main.o
+                0x100000ec                scanl
+ .bss.skip      0x100000f0        0x4 ./out/obj/main.o
+                0x100000f0                skip
+ .bss.f_flash2.10739
+                0x100000f4        0x4 ./out/obj/main.o
  .bss.audio_usb_pll_freq
-                0x100000e0        0x8 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x100000f8        0x8 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  *(COMMON)
- COMMON         0x100000e8      0x480 ./out/obj/z80.o
-                0x100000e8                sz53p_table
-                0x100001e8                parity_table
-                0x100002e8                ioblock_2_table
-                0x100003e8                ioblock_inc1_table
-                0x10000428                ioblock_dec1_table
-                0x10000468                sz53_table
- COMMON         0x10000568      0x468 ./out/obj/v_alleg.o
-                0x10000568                colors
-                0x10000968                gkey
-                0x1000096c                fila
- COMMON         0x100009d0       0x5c ./out/obj/main.o
-                0x100009d0                main_tecla
-                0x100009d4                hay_tecla
-                0x100009d8                frame_counter
-                0x100009dc                last_fps
-                0x100009e0                target_cycle
-                0x100009e4                spectrumZ80
- COMMON         0x10000a2c      0x128 ./out/obj/mem.o
-                0x10000a2c                mem
- COMMON         0x10000b54        0xc ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
-                0x10000b54                ILI9341_x
-                0x10000b58                ILI9341_Opts
-                0x10000b5e                ILI9341_y
-                0x10000b60                . = ALIGN (0x4)
-                0x10000b60                _ebss = .
-                0x10000b60                PROVIDE (end, .)
+ COMMON         0x10000100      0x480 ./out/obj/z80.o
+                0x10000100                sz53p_table
+                0x10000200                parity_table
+                0x10000300                ioblock_2_table
+                0x10000400                ioblock_inc1_table
+                0x10000440                ioblock_dec1_table
+                0x10000480                sz53_table
+ COMMON         0x10000580      0x468 ./out/obj/v_alleg.o
+                0x10000580                colors
+                0x10000980                gkey
+                0x10000984                fila
+ COMMON         0x100009e8       0x5c ./out/obj/main.o
+                0x100009e8                main_tecla
+                0x100009ec                hay_tecla
+                0x100009f0                frame_counter
+                0x100009f4                last_fps
+                0x100009f8                target_cycle
+                0x100009fc                spectrumZ80
+ COMMON         0x10000a44      0x128 ./out/obj/mem.o
+                0x10000a44                mem
+ COMMON         0x10000b6c        0xc ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x10000b6c                ILI9341_x
+                0x10000b70                ILI9341_Opts
+                0x10000b76                ILI9341_y
+                0x10000b78                . = ALIGN (0x4)
+                0x10000b78                _ebss = .
+                0x10000b78                PROVIDE (end, .)
 
 .noinit_RAM2    0x10080000        0x0
  *(.noinit.$RAM2*)
@@ -2876,58 +2968,60 @@ END GROUP
  *(.noinit.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.noinit         0x10000b60        0x0
-                0x10000b60                _noinit = .
+.noinit         0x10000b78        0x0
+                0x10000b78                _noinit = .
  *(.noinit*)
-                0x10000b60                . = ALIGN (0x4)
-                0x10000b60                _end_noinit = .
-                0x10000b60                PROVIDE (_pvHeapStart, .)
+                0x10000b78                . = ALIGN (0x4)
+                0x10000b78                _end_noinit = .
+                0x10000b78                PROVIDE (_pvHeapStart, .)
                 0x10008000                PROVIDE (_vStackTop, (__top_RamLoc32 - 0x0))
 OUTPUT(./out/bin/speecy.axf elf32-littlearm)
 
-.debug_info     0x00000000     0xac4a
- .debug_info    0x00000000      0xe95 ./out/obj/z80.o
- .debug_info    0x00000e95      0x9f6 ./out/obj/v_alleg.o
- .debug_info    0x0000188b     0x10ec ./out/obj/graphics.o
- .debug_info    0x00002977      0x112 ./out/obj/vector.o
- .debug_info    0x00002a89      0x48d ./out/obj/botones.o
- .debug_info    0x00002f16      0xc05 ./out/obj/main.o
- .debug_info    0x00003b1b      0xa02 ./out/obj/mem.o
- .debug_info    0x0000451d       0x3f ./out/obj/crp.o
- .debug_info    0x0000455c     0x116c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_info    0x000056c8      0x500 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_info    0x00005bc8      0x44c ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_info    0x00006014      0xc25 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_info    0x00006c39      0x1c3 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_info    0x00006dfc     0x158f ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_info    0x0000838b      0x5c0 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_info    0x0000894b      0x145 ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_info    0x00008a90      0x902 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_info    0x00009392      0x7e0 ./out/lib/drivers_bm.a(uart.o)
- .debug_info    0x00009b72     0x10d8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+.debug_info     0x00000000     0xb1b0
+ .debug_info    0x00000000      0xee1 ./out/obj/z80.o
+ .debug_info    0x00000ee1      0xa05 ./out/obj/v_alleg.o
+ .debug_info    0x000018e6     0x10ec ./out/obj/graphics.o
+ .debug_info    0x000029d2      0x112 ./out/obj/vector.o
+ .debug_info    0x00002ae4      0x5c9 ./out/obj/botones.o
+ .debug_info    0x000030ad      0xd66 ./out/obj/main.o
+ .debug_info    0x00003e13      0xa02 ./out/obj/mem.o
+ .debug_info    0x00004815       0x3f ./out/obj/crp.o
+ .debug_info    0x00004854      0x26e ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_info    0x00004ac2     0x116c ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_info    0x00005c2e      0x500 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_info    0x0000612e      0x44c ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_info    0x0000657a      0xc25 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_info    0x0000719f      0x1c3 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_info    0x00007362     0x158f ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_info    0x000088f1      0x5c0 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_info    0x00008eb1      0x145 ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_info    0x00008ff6      0x902 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_info    0x000098f8      0x7e0 ./out/lib/drivers_bm.a(uart.o)
+ .debug_info    0x0000a0d8     0x10d8 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_abbrev   0x00000000     0x1df1
- .debug_abbrev  0x00000000      0x275 ./out/obj/z80.o
- .debug_abbrev  0x00000275      0x1f4 ./out/obj/v_alleg.o
- .debug_abbrev  0x00000469      0x1fe ./out/obj/graphics.o
- .debug_abbrev  0x00000667       0x72 ./out/obj/vector.o
- .debug_abbrev  0x000006d9      0x168 ./out/obj/botones.o
- .debug_abbrev  0x00000841      0x1b5 ./out/obj/main.o
- .debug_abbrev  0x000009f6      0x1c9 ./out/obj/mem.o
- .debug_abbrev  0x00000bbf       0x36 ./out/obj/crp.o
- .debug_abbrev  0x00000bf5      0x249 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_abbrev  0x00000e3e      0x171 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_abbrev  0x00000faf      0x111 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_abbrev  0x000010c0      0x232 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_abbrev  0x000012f2       0xc0 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_abbrev  0x000013b2      0x2c0 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_abbrev  0x00001672       0xc1 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_abbrev  0x00001733       0x84 ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_abbrev  0x000017b7      0x181 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_abbrev  0x00001938      0x20d ./out/lib/drivers_bm.a(uart.o)
- .debug_abbrev  0x00001b45      0x2ac ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+.debug_abbrev   0x00000000     0x1f83
+ .debug_abbrev  0x00000000      0x289 ./out/obj/z80.o
+ .debug_abbrev  0x00000289      0x1f4 ./out/obj/v_alleg.o
+ .debug_abbrev  0x0000047d      0x1fe ./out/obj/graphics.o
+ .debug_abbrev  0x0000067b       0x72 ./out/obj/vector.o
+ .debug_abbrev  0x000006ed      0x1cb ./out/obj/botones.o
+ .debug_abbrev  0x000008b8      0x1fc ./out/obj/main.o
+ .debug_abbrev  0x00000ab4      0x1c9 ./out/obj/mem.o
+ .debug_abbrev  0x00000c7d       0x36 ./out/obj/crp.o
+ .debug_abbrev  0x00000cb3       0xd4 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_abbrev  0x00000d87      0x249 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_abbrev  0x00000fd0      0x171 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_abbrev  0x00001141      0x111 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_abbrev  0x00001252      0x232 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_abbrev  0x00001484       0xc0 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_abbrev  0x00001544      0x2c0 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_abbrev  0x00001804       0xc1 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_abbrev  0x000018c5       0x84 ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_abbrev  0x00001949      0x181 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_abbrev  0x00001aca      0x20d ./out/lib/drivers_bm.a(uart.o)
+ .debug_abbrev  0x00001cd7      0x2ac ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_aranges  0x00000000      0x928
+.debug_aranges  0x00000000      0x978
  .debug_aranges
                 0x00000000       0x78 ./out/obj/z80.o
  .debug_aranges
@@ -2937,230 +3031,237 @@ OUTPUT(./out/bin/speecy.axf elf32-littlearm)
  .debug_aranges
                 0x000001a0       0x68 ./out/obj/vector.o
  .debug_aranges
-                0x00000208       0x48 ./out/obj/botones.o
+                0x00000208       0x70 ./out/obj/botones.o
  .debug_aranges
-                0x00000250       0x28 ./out/obj/main.o
+                0x00000278       0x30 ./out/obj/main.o
  .debug_aranges
-                0x00000278       0x60 ./out/obj/mem.o
+                0x000002a8       0x60 ./out/obj/mem.o
  .debug_aranges
-                0x000002d8       0x18 ./out/obj/crp.o
+                0x00000308       0x18 ./out/obj/crp.o
  .debug_aranges
-                0x000002f0       0xd8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x00000320       0x20 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
  .debug_aranges
-                0x000003c8       0x48 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x00000340       0xd8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .debug_aranges
-                0x00000410       0x68 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+                0x00000418       0x48 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .debug_aranges
-                0x00000478       0xe8 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x00000460       0x68 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
  .debug_aranges
-                0x00000560       0x30 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+                0x000004c8       0xe8 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .debug_aranges
-                0x00000590      0x138 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x000005b0       0x30 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
  .debug_aranges
-                0x000006c8       0x20 ./out/lib/ext_drivers.a(sysinit.o)
+                0x000005e0      0x138 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .debug_aranges
-                0x000006e8       0x20 ./out/lib/ext_drivers.a(fpu_init.o)
+                0x00000718       0x20 ./out/lib/ext_drivers.a(sysinit.o)
  .debug_aranges
-                0x00000708       0x50 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x00000738       0x20 ./out/lib/ext_drivers.a(fpu_init.o)
  .debug_aranges
-                0x00000758       0xb8 ./out/lib/drivers_bm.a(uart.o)
+                0x00000758       0x50 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .debug_aranges
-                0x00000810      0x118 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x000007a8       0xb8 ./out/lib/drivers_bm.a(uart.o)
+ .debug_aranges
+                0x00000860      0x118 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_ranges   0x00000000      0x7f0
+.debug_ranges   0x00000000      0x830
  .debug_ranges  0x00000000       0x68 ./out/obj/z80.o
  .debug_ranges  0x00000068       0xa8 ./out/obj/v_alleg.o
  .debug_ranges  0x00000110       0x60 ./out/obj/graphics.o
  .debug_ranges  0x00000170       0x58 ./out/obj/vector.o
- .debug_ranges  0x000001c8       0x38 ./out/obj/botones.o
- .debug_ranges  0x00000200       0x18 ./out/obj/main.o
- .debug_ranges  0x00000218       0x50 ./out/obj/mem.o
- .debug_ranges  0x00000268       0xc8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_ranges  0x00000330       0x38 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_ranges  0x00000368       0x58 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_ranges  0x000003c0       0xd8 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_ranges  0x00000498       0x20 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_ranges  0x000004b8      0x128 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_ranges  0x000005e0       0x10 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_ranges  0x000005f0       0x10 ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_ranges  0x00000600       0x40 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_ranges  0x00000640       0xa8 ./out/lib/drivers_bm.a(uart.o)
- .debug_ranges  0x000006e8      0x108 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+ .debug_ranges  0x000001c8       0x60 ./out/obj/botones.o
+ .debug_ranges  0x00000228       0x20 ./out/obj/main.o
+ .debug_ranges  0x00000248       0x50 ./out/obj/mem.o
+ .debug_ranges  0x00000298       0x10 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_ranges  0x000002a8       0xc8 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_ranges  0x00000370       0x38 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_ranges  0x000003a8       0x58 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_ranges  0x00000400       0xd8 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_ranges  0x000004d8       0x20 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_ranges  0x000004f8      0x128 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_ranges  0x00000620       0x10 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_ranges  0x00000630       0x10 ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_ranges  0x00000640       0x40 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_ranges  0x00000680       0xa8 ./out/lib/drivers_bm.a(uart.o)
+ .debug_ranges  0x00000728      0x108 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_macro    0x00000000     0xa321
- .debug_macro   0x00000000      0x4aa ./out/obj/z80.o
- .debug_macro   0x000004aa      0x868 ./out/obj/z80.o
- .debug_macro   0x00000d12     0x14ce ./out/obj/z80.o
- .debug_macro   0x000021e0       0x58 ./out/obj/z80.o
- .debug_macro   0x00002238       0x16 ./out/obj/z80.o
- .debug_macro   0x0000224e       0x35 ./out/obj/z80.o
- .debug_macro   0x00002283       0xa2 ./out/obj/z80.o
- .debug_macro   0x00002325       0x16 ./out/obj/z80.o
- .debug_macro   0x0000233b       0x97 ./out/obj/z80.o
- .debug_macro   0x000023d2       0x10 ./out/obj/z80.o
- .debug_macro   0x000023e2       0xef ./out/obj/z80.o
- .debug_macro   0x000024d1       0x4a ./out/obj/z80.o
- .debug_macro   0x0000251b       0x52 ./out/obj/z80.o
- .debug_macro   0x0000256d       0x16 ./out/obj/z80.o
- .debug_macro   0x00002583       0x43 ./out/obj/z80.o
- .debug_macro   0x000025c6      0x180 ./out/obj/z80.o
- .debug_macro   0x00002746       0x10 ./out/obj/z80.o
- .debug_macro   0x00002756       0x22 ./out/obj/z80.o
- .debug_macro   0x00002778       0xbd ./out/obj/z80.o
- .debug_macro   0x00002835       0x16 ./out/obj/z80.o
- .debug_macro   0x0000284b      0x16c ./out/obj/z80.o
- .debug_macro   0x000029b7       0x84 ./out/obj/z80.o
- .debug_macro   0x00002a3b       0x10 ./out/obj/z80.o
- .debug_macro   0x00002a4b       0x10 ./out/obj/z80.o
- .debug_macro   0x00002a5b      0x20f ./out/obj/z80.o
- .debug_macro   0x00002c6a       0x22 ./out/obj/z80.o
- .debug_macro   0x00002c8c       0x5f ./out/obj/z80.o
- .debug_macro   0x00002ceb       0x28 ./out/obj/z80.o
- .debug_macro   0x00002d13       0x3b ./out/obj/z80.o
- .debug_macro   0x00002d4e       0x2d ./out/obj/z80.o
- .debug_macro   0x00002d7b       0x42 ./out/obj/z80.o
- .debug_macro   0x00002dbd      0xd39 ./out/obj/z80.o
- .debug_macro   0x00003af6      0x2bc ./out/obj/z80.o
- .debug_macro   0x00003db2      0x112 ./out/obj/z80.o
- .debug_macro   0x00003ec4       0x11 ./out/obj/z80.o
- .debug_macro   0x00003ed5       0x2a ./out/obj/z80.o
- .debug_macro   0x00003eff       0x16 ./out/obj/z80.o
- .debug_macro   0x00003f15      0x2e6 ./out/obj/z80.o
- .debug_macro   0x000041fb       0x82 ./out/obj/z80.o
- .debug_macro   0x0000427d      0x13d ./out/obj/z80.o
- .debug_macro   0x000043ba      0x198 ./out/obj/z80.o
- .debug_macro   0x00004552       0x34 ./out/obj/z80.o
- .debug_macro   0x00004586       0x58 ./out/obj/z80.o
- .debug_macro   0x000045de      0x236 ./out/obj/z80.o
- .debug_macro   0x00004814      0x572 ./out/obj/z80.o
- .debug_macro   0x00004d86       0x16 ./out/obj/z80.o
- .debug_macro   0x00004d9c      0x18a ./out/obj/z80.o
- .debug_macro   0x00004f26       0x88 ./out/obj/z80.o
- .debug_macro   0x00004fae      0x1b9 ./out/obj/z80.o
- .debug_macro   0x00005167      0x1da ./out/obj/z80.o
- .debug_macro   0x00005341       0x40 ./out/obj/z80.o
- .debug_macro   0x00005381       0x1c ./out/obj/z80.o
- .debug_macro   0x0000539d       0x2e ./out/obj/z80.o
- .debug_macro   0x000053cb       0x2e ./out/obj/z80.o
- .debug_macro   0x000053f9       0x22 ./out/obj/z80.o
- .debug_macro   0x0000541b      0x201 ./out/obj/z80.o
- .debug_macro   0x0000561c       0xe0 ./out/obj/z80.o
- .debug_macro   0x000056fc      0x34c ./out/obj/z80.o
- .debug_macro   0x00005a48       0xdc ./out/obj/z80.o
- .debug_macro   0x00005b24       0xc4 ./out/obj/z80.o
- .debug_macro   0x00005be8       0x94 ./out/obj/z80.o
- .debug_macro   0x00005c7c       0xb8 ./out/obj/z80.o
- .debug_macro   0x00005d34       0x4c ./out/obj/z80.o
- .debug_macro   0x00005d80       0x16 ./out/obj/z80.o
- .debug_macro   0x00005d96      0x328 ./out/obj/z80.o
- .debug_macro   0x000060be       0x3a ./out/obj/z80.o
- .debug_macro   0x000060f8       0xd0 ./out/obj/z80.o
- .debug_macro   0x000061c8       0x11 ./out/obj/z80.o
- .debug_macro   0x000061d9       0x22 ./out/obj/z80.o
- .debug_macro   0x000061fb       0x40 ./out/obj/z80.o
- .debug_macro   0x0000623b      0x2a6 ./out/obj/z80.o
- .debug_macro   0x000064e1       0x10 ./out/obj/z80.o
- .debug_macro   0x000064f1       0x35 ./out/obj/z80.o
- .debug_macro   0x00006526       0x1f ./out/obj/z80.o
- .debug_macro   0x00006545       0x7b ./out/obj/z80.o
- .debug_macro   0x000065c0       0x10 ./out/obj/z80.o
- .debug_macro   0x000065d0       0x16 ./out/obj/z80.o
- .debug_macro   0x000065e6       0x34 ./out/obj/z80.o
- .debug_macro   0x0000661a      0x328 ./out/obj/z80.o
- .debug_macro   0x00006942       0x16 ./out/obj/z80.o
- .debug_macro   0x00006958       0x19 ./out/obj/z80.o
- .debug_macro   0x00006971      0x44e ./out/obj/v_alleg.o
- .debug_macro   0x00006dbf      0x1b4 ./out/obj/v_alleg.o
- .debug_macro   0x00006f73       0x22 ./out/obj/v_alleg.o
- .debug_macro   0x00006f95       0xc4 ./out/obj/v_alleg.o
- .debug_macro   0x00007059      0x42e ./out/obj/graphics.o
- .debug_macro   0x00007487       0x1a ./out/obj/vector.o
- .debug_macro   0x000074a1       0x16 ./out/obj/vector.o
- .debug_macro   0x000074b7      0x3c3 ./out/obj/botones.o
- .debug_macro   0x0000787a       0x44 ./out/obj/botones.o
- .debug_macro   0x000078be      0x209 ./out/obj/botones.o
- .debug_macro   0x00007ac7       0x66 ./out/obj/botones.o
- .debug_macro   0x00007b2d       0x18 ./out/obj/botones.o
- .debug_macro   0x00007b45       0x22 ./out/obj/botones.o
- .debug_macro   0x00007b67       0x3a ./out/obj/botones.o
- .debug_macro   0x00007ba1      0x451 ./out/obj/main.o
- .debug_macro   0x00007ff2      0x45f ./out/obj/mem.o
- .debug_macro   0x00008451       0x16 ./out/obj/mem.o
- .debug_macro   0x00008467       0x16 ./out/obj/mem.o
- .debug_macro   0x0000847d       0x29 ./out/obj/mem.o
- .debug_macro   0x000084a6       0x17 ./out/obj/crp.o
- .debug_macro   0x000084bd      0x4ef ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_macro   0x000089ac      0x166 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_macro   0x00008b12      0x2f7 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_macro   0x00008e09      0x2e0 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_macro   0x000090e9      0x2e0 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_macro   0x000093c9       0x23 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_macro   0x000093ec      0x2e6 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_macro   0x000096d2      0x2e0 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_macro   0x000099b2       0xc6 ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_macro   0x00009a78      0x2e0 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_macro   0x00009d58      0x2e9 ./out/lib/drivers_bm.a(uart.o)
- .debug_macro   0x0000a041      0x2e0 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+.debug_macro    0x00000000     0xa47d
+ .debug_macro   0x00000000      0x4b4 ./out/obj/z80.o
+ .debug_macro   0x000004b4      0x868 ./out/obj/z80.o
+ .debug_macro   0x00000d1c     0x14ce ./out/obj/z80.o
+ .debug_macro   0x000021ea       0x58 ./out/obj/z80.o
+ .debug_macro   0x00002242       0x16 ./out/obj/z80.o
+ .debug_macro   0x00002258       0x35 ./out/obj/z80.o
+ .debug_macro   0x0000228d       0xa2 ./out/obj/z80.o
+ .debug_macro   0x0000232f       0x16 ./out/obj/z80.o
+ .debug_macro   0x00002345       0x97 ./out/obj/z80.o
+ .debug_macro   0x000023dc       0x10 ./out/obj/z80.o
+ .debug_macro   0x000023ec       0xef ./out/obj/z80.o
+ .debug_macro   0x000024db       0x4a ./out/obj/z80.o
+ .debug_macro   0x00002525       0x52 ./out/obj/z80.o
+ .debug_macro   0x00002577       0x16 ./out/obj/z80.o
+ .debug_macro   0x0000258d       0x43 ./out/obj/z80.o
+ .debug_macro   0x000025d0      0x180 ./out/obj/z80.o
+ .debug_macro   0x00002750       0x10 ./out/obj/z80.o
+ .debug_macro   0x00002760       0x22 ./out/obj/z80.o
+ .debug_macro   0x00002782       0xbd ./out/obj/z80.o
+ .debug_macro   0x0000283f       0x16 ./out/obj/z80.o
+ .debug_macro   0x00002855      0x16c ./out/obj/z80.o
+ .debug_macro   0x000029c1       0x84 ./out/obj/z80.o
+ .debug_macro   0x00002a45       0x10 ./out/obj/z80.o
+ .debug_macro   0x00002a55       0x10 ./out/obj/z80.o
+ .debug_macro   0x00002a65      0x20f ./out/obj/z80.o
+ .debug_macro   0x00002c74       0x22 ./out/obj/z80.o
+ .debug_macro   0x00002c96       0x5f ./out/obj/z80.o
+ .debug_macro   0x00002cf5       0x28 ./out/obj/z80.o
+ .debug_macro   0x00002d1d       0x3b ./out/obj/z80.o
+ .debug_macro   0x00002d58       0x2d ./out/obj/z80.o
+ .debug_macro   0x00002d85       0x42 ./out/obj/z80.o
+ .debug_macro   0x00002dc7      0xd39 ./out/obj/z80.o
+ .debug_macro   0x00003b00      0x2bc ./out/obj/z80.o
+ .debug_macro   0x00003dbc      0x112 ./out/obj/z80.o
+ .debug_macro   0x00003ece       0x11 ./out/obj/z80.o
+ .debug_macro   0x00003edf       0x2a ./out/obj/z80.o
+ .debug_macro   0x00003f09       0x16 ./out/obj/z80.o
+ .debug_macro   0x00003f1f      0x2e6 ./out/obj/z80.o
+ .debug_macro   0x00004205       0x82 ./out/obj/z80.o
+ .debug_macro   0x00004287      0x13d ./out/obj/z80.o
+ .debug_macro   0x000043c4      0x198 ./out/obj/z80.o
+ .debug_macro   0x0000455c       0x34 ./out/obj/z80.o
+ .debug_macro   0x00004590       0x58 ./out/obj/z80.o
+ .debug_macro   0x000045e8      0x236 ./out/obj/z80.o
+ .debug_macro   0x0000481e      0x572 ./out/obj/z80.o
+ .debug_macro   0x00004d90       0x16 ./out/obj/z80.o
+ .debug_macro   0x00004da6      0x18a ./out/obj/z80.o
+ .debug_macro   0x00004f30       0x88 ./out/obj/z80.o
+ .debug_macro   0x00004fb8      0x1b9 ./out/obj/z80.o
+ .debug_macro   0x00005171      0x1da ./out/obj/z80.o
+ .debug_macro   0x0000534b       0x40 ./out/obj/z80.o
+ .debug_macro   0x0000538b       0x1c ./out/obj/z80.o
+ .debug_macro   0x000053a7       0x2e ./out/obj/z80.o
+ .debug_macro   0x000053d5       0x2e ./out/obj/z80.o
+ .debug_macro   0x00005403       0x22 ./out/obj/z80.o
+ .debug_macro   0x00005425      0x201 ./out/obj/z80.o
+ .debug_macro   0x00005626       0xe0 ./out/obj/z80.o
+ .debug_macro   0x00005706      0x34c ./out/obj/z80.o
+ .debug_macro   0x00005a52       0xdc ./out/obj/z80.o
+ .debug_macro   0x00005b2e       0xc4 ./out/obj/z80.o
+ .debug_macro   0x00005bf2       0x94 ./out/obj/z80.o
+ .debug_macro   0x00005c86       0xb8 ./out/obj/z80.o
+ .debug_macro   0x00005d3e       0x4c ./out/obj/z80.o
+ .debug_macro   0x00005d8a       0x16 ./out/obj/z80.o
+ .debug_macro   0x00005da0      0x328 ./out/obj/z80.o
+ .debug_macro   0x000060c8       0x3a ./out/obj/z80.o
+ .debug_macro   0x00006102       0xd0 ./out/obj/z80.o
+ .debug_macro   0x000061d2       0x11 ./out/obj/z80.o
+ .debug_macro   0x000061e3       0x22 ./out/obj/z80.o
+ .debug_macro   0x00006205       0x40 ./out/obj/z80.o
+ .debug_macro   0x00006245      0x2a6 ./out/obj/z80.o
+ .debug_macro   0x000064eb       0x10 ./out/obj/z80.o
+ .debug_macro   0x000064fb       0x35 ./out/obj/z80.o
+ .debug_macro   0x00006530       0x1f ./out/obj/z80.o
+ .debug_macro   0x0000654f       0x7b ./out/obj/z80.o
+ .debug_macro   0x000065ca       0x10 ./out/obj/z80.o
+ .debug_macro   0x000065da       0x16 ./out/obj/z80.o
+ .debug_macro   0x000065f0       0x34 ./out/obj/z80.o
+ .debug_macro   0x00006624      0x328 ./out/obj/z80.o
+ .debug_macro   0x0000694c       0x16 ./out/obj/z80.o
+ .debug_macro   0x00006962       0x19 ./out/obj/z80.o
+ .debug_macro   0x0000697b      0x44e ./out/obj/v_alleg.o
+ .debug_macro   0x00006dc9      0x1b4 ./out/obj/v_alleg.o
+ .debug_macro   0x00006f7d       0x22 ./out/obj/v_alleg.o
+ .debug_macro   0x00006f9f       0xbe ./out/obj/v_alleg.o
+ .debug_macro   0x0000705d      0x42e ./out/obj/graphics.o
+ .debug_macro   0x0000748b       0x1a ./out/obj/vector.o
+ .debug_macro   0x000074a5       0x16 ./out/obj/vector.o
+ .debug_macro   0x000074bb      0x419 ./out/obj/botones.o
+ .debug_macro   0x000078d4       0x44 ./out/obj/botones.o
+ .debug_macro   0x00007918      0x209 ./out/obj/botones.o
+ .debug_macro   0x00007b21       0x66 ./out/obj/botones.o
+ .debug_macro   0x00007b87       0x18 ./out/obj/botones.o
+ .debug_macro   0x00007b9f       0x22 ./out/obj/botones.o
+ .debug_macro   0x00007bc1       0x3a ./out/obj/botones.o
+ .debug_macro   0x00007bfb      0x45a ./out/obj/main.o
+ .debug_macro   0x00008055      0x45f ./out/obj/mem.o
+ .debug_macro   0x000084b4       0x16 ./out/obj/mem.o
+ .debug_macro   0x000084ca       0x16 ./out/obj/mem.o
+ .debug_macro   0x000084e0       0x29 ./out/obj/mem.o
+ .debug_macro   0x00008509       0x17 ./out/obj/crp.o
+ .debug_macro   0x00008520       0xf9 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x00008619      0x166 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_macro   0x0000877f      0x4ef ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_macro   0x00008c6e      0x2f7 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_macro   0x00008f65      0x2e0 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_macro   0x00009245      0x2e0 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_macro   0x00009525       0x23 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_macro   0x00009548      0x2e6 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_macro   0x0000982e      0x2e0 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_macro   0x00009b0e       0xc6 ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_macro   0x00009bd4      0x2e0 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x00009eb4      0x2e9 ./out/lib/drivers_bm.a(uart.o)
+ .debug_macro   0x0000a19d      0x2e0 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_line     0x00000000     0xb36f
- .debug_line    0x00000000     0x3251 ./out/obj/z80.o
- .debug_line    0x00003251      0x9d9 ./out/obj/v_alleg.o
- .debug_line    0x00003c2a      0xb93 ./out/obj/graphics.o
- .debug_line    0x000047bd       0xa4 ./out/obj/vector.o
- .debug_line    0x00004861      0x7d1 ./out/obj/botones.o
- .debug_line    0x00005032      0x8ac ./out/obj/main.o
- .debug_line    0x000058de      0x980 ./out/obj/mem.o
- .debug_line    0x0000625e       0x4a ./out/obj/crp.o
- .debug_line    0x000062a8      0xb33 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_line    0x00006ddb      0x6f6 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_line    0x000074d1      0x70e ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_line    0x00007bdf      0x9f2 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_line    0x000085d1       0xe9 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_line    0x000086ba      0xaaf ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_line    0x00009169      0x655 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_line    0x000097be      0x26d ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_line    0x00009a2b      0x72f ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_line    0x0000a15a      0x87d ./out/lib/drivers_bm.a(uart.o)
- .debug_line    0x0000a9d7      0x998 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+.debug_line     0x00000000     0xb7b8
+ .debug_line    0x00000000     0x3299 ./out/obj/z80.o
+ .debug_line    0x00003299      0x9e1 ./out/obj/v_alleg.o
+ .debug_line    0x00003c7a      0xb93 ./out/obj/graphics.o
+ .debug_line    0x0000480d       0xa4 ./out/obj/vector.o
+ .debug_line    0x000048b1      0x904 ./out/obj/botones.o
+ .debug_line    0x000051b5      0x8df ./out/obj/main.o
+ .debug_line    0x00005a94      0x980 ./out/obj/mem.o
+ .debug_line    0x00006414       0x4a ./out/obj/crp.o
+ .debug_line    0x0000645e      0x293 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_line    0x000066f1      0xb33 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_line    0x00007224      0x6f6 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_line    0x0000791a      0x70e ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_line    0x00008028      0x9f2 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_line    0x00008a1a       0xe9 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_line    0x00008b03      0xaaf ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_line    0x000095b2      0x655 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_line    0x00009c07      0x26d ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_line    0x00009e74      0x72f ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_line    0x0000a5a3      0x87d ./out/lib/drivers_bm.a(uart.o)
+ .debug_line    0x0000ae20      0x998 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x1f749
- .debug_str     0x00000000    0x1c53b ./out/obj/z80.o
-                              0x1c7c8 (size before relaxing)
- .debug_str     0x0001c53b      0x816 ./out/obj/v_alleg.o
-                              0x18984 (size before relaxing)
- .debug_str     0x0001cd51      0x220 ./out/obj/graphics.o
+.debug_str      0x00000000    0x1f855
+ .debug_str     0x00000000    0x1c55b ./out/obj/z80.o
+                              0x1c7e8 (size before relaxing)
+ .debug_str     0x0001c55b      0x7e4 ./out/obj/v_alleg.o
+                              0x18959 (size before relaxing)
+ .debug_str     0x0001cd3f      0x220 ./out/obj/graphics.o
                               0x185b0 (size before relaxing)
- .debug_str     0x0001cf71       0xe7 ./out/obj/vector.o
+ .debug_str     0x0001cf5f       0xe7 ./out/obj/vector.o
                                0x2500 (size before relaxing)
- .debug_str     0x0001d058      0x1cf ./out/obj/botones.o
-                              0x167a1 (size before relaxing)
- .debug_str     0x0001d227      0x141 ./out/obj/main.o
-                              0x187e9 (size before relaxing)
- .debug_str     0x0001d368      0x1a8 ./out/obj/mem.o
+ .debug_str     0x0001d046      0x26a ./out/obj/botones.o
+                              0x17948 (size before relaxing)
+ .debug_str     0x0001d2b0      0x13a ./out/obj/main.o
+                              0x18cf9 (size before relaxing)
+ .debug_str     0x0001d3ea      0x1a8 ./out/obj/mem.o
                               0x184b9 (size before relaxing)
- .debug_str     0x0001d510       0x49 ./out/obj/crp.o
+ .debug_str     0x0001d592       0x49 ./out/obj/crp.o
                                0x2466 (size before relaxing)
- .debug_str     0x0001d559      0x950 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_str     0x0001d5db       0xa7 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+                               0x5580 (size before relaxing)
+ .debug_str     0x0001d682      0x92e ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
                               0x17ed6 (size before relaxing)
- .debug_str     0x0001dea9      0x1a9 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_str     0x0001dfb0      0x1a9 ./out/lib/drivers_ILI9341_bm.a(spi.o)
                               0x1461b (size before relaxing)
- .debug_str     0x0001e052      0x12e ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_str     0x0001e159      0x12e ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
                               0x14433 (size before relaxing)
- .debug_str     0x0001e180      0x483 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_str     0x0001e287      0x483 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
                               0x14d4e (size before relaxing)
- .debug_str     0x0001e603      0x166 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_str     0x0001e70a      0x166 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
                                0x259b (size before relaxing)
- .debug_str     0x0001e769      0x827 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_str     0x0001e870      0x827 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
                               0x155b4 (size before relaxing)
- .debug_str     0x0001ef90       0x31 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_str     0x0001f097       0x31 ./out/lib/ext_drivers.a(sysinit.o)
                               0x14d30 (size before relaxing)
- .debug_str     0x0001efc1       0xd5 ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_str     0x0001f0c8       0xd5 ./out/lib/ext_drivers.a(fpu_init.o)
                                0x8bc6 (size before relaxing)
- .debug_str     0x0001f096      0x107 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_str     0x0001f19d      0x107 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
                               0x14ff6 (size before relaxing)
- .debug_str     0x0001f19d      0x248 ./out/lib/drivers_bm.a(uart.o)
+ .debug_str     0x0001f2a4      0x24d ./out/lib/drivers_bm.a(uart.o)
                               0x1463f (size before relaxing)
- .debug_str     0x0001f3e5      0x364 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+ .debug_str     0x0001f4f1      0x364 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
                               0x1516f (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -3173,6 +3274,7 @@ OUTPUT(./out/bin/speecy.axf elf32-littlearm)
  .comment       0x00000000       0x71 ./out/obj/main.o
  .comment       0x00000000       0x71 ./out/obj/mem.o
  .comment       0x00000000       0x71 ./out/obj/crp.o
+ .comment       0x00000000       0x71 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
  .comment       0x00000000       0x71 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .comment       0x00000000       0x71 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .comment       0x00000000       0x71 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
@@ -3204,47 +3306,50 @@ OUTPUT(./out/bin/speecy.axf elf32-littlearm)
  .ARM.attributes
                 0x00000181       0x37 ./out/obj/crp.o
  .ARM.attributes
-                0x000001b8       0x37 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+                0x000001b8       0x37 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
  .ARM.attributes
-                0x000001ef       0x37 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+                0x000001ef       0x37 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
  .ARM.attributes
-                0x00000226       0x37 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+                0x00000226       0x37 ./out/lib/drivers_ILI9341_bm.a(spi.o)
  .ARM.attributes
-                0x0000025d       0x37 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+                0x0000025d       0x37 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
  .ARM.attributes
-                0x00000294       0x37 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+                0x00000294       0x37 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
  .ARM.attributes
-                0x000002cb       0x37 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+                0x000002cb       0x37 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
  .ARM.attributes
-                0x00000302       0x37 ./out/lib/ext_drivers.a(sysinit.o)
+                0x00000302       0x37 ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
  .ARM.attributes
-                0x00000339       0x37 ./out/lib/ext_drivers.a(fpu_init.o)
+                0x00000339       0x37 ./out/lib/ext_drivers.a(sysinit.o)
  .ARM.attributes
-                0x00000370       0x37 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+                0x00000370       0x37 ./out/lib/ext_drivers.a(fpu_init.o)
  .ARM.attributes
-                0x000003a7       0x37 ./out/lib/drivers_bm.a(uart.o)
+                0x000003a7       0x37 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
  .ARM.attributes
-                0x000003de       0x37 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+                0x000003de       0x37 ./out/lib/drivers_bm.a(uart.o)
  .ARM.attributes
-                0x00000415       0x32 c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
+                0x00000415       0x37 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+ .ARM.attributes
+                0x0000044c       0x32 c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
 
-.debug_frame    0x00000000     0x1c18
+.debug_frame    0x00000000     0x1cf4
  .debug_frame   0x00000000      0x170 ./out/obj/z80.o
  .debug_frame   0x00000170      0x220 ./out/obj/v_alleg.o
  .debug_frame   0x00000390      0x170 ./out/obj/graphics.o
  .debug_frame   0x00000500      0x100 ./out/obj/vector.o
- .debug_frame   0x00000600       0xc4 ./out/obj/botones.o
- .debug_frame   0x000006c4       0x4c ./out/obj/main.o
- .debug_frame   0x00000710      0x104 ./out/obj/mem.o
- .debug_frame   0x00000814      0x2ec ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
- .debug_frame   0x00000b00       0xc0 ./out/lib/drivers_ILI9341_bm.a(spi.o)
- .debug_frame   0x00000bc0      0x130 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
- .debug_frame   0x00000cf0      0x320 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
- .debug_frame   0x00001010       0x68 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
- .debug_frame   0x00001078      0x41c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
- .debug_frame   0x00001494       0x30 ./out/lib/ext_drivers.a(sysinit.o)
- .debug_frame   0x000014c4       0x2c ./out/lib/ext_drivers.a(fpu_init.o)
- .debug_frame   0x000014f0       0xd0 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
- .debug_frame   0x000015c0      0x258 ./out/lib/drivers_bm.a(uart.o)
- .debug_frame   0x00001818      0x3d4 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
- .debug_frame   0x00001bec       0x2c c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000600      0x154 ./out/obj/botones.o
+ .debug_frame   0x00000754       0x68 ./out/obj/main.o
+ .debug_frame   0x000007bc      0x104 ./out/obj/mem.o
+ .debug_frame   0x000008c0       0x30 ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_fonts.o)
+ .debug_frame   0x000008f0      0x2ec ./out/lib/drivers_ILI9341_bm.a(tm_stm32f4_ili9341.o)
+ .debug_frame   0x00000bdc       0xc0 ./out/lib/drivers_ILI9341_bm.a(spi.o)
+ .debug_frame   0x00000c9c      0x130 ./out/lib/ext_drivers.a(gpio_18xx_43xx.o)
+ .debug_frame   0x00000dcc      0x320 ./out/lib/ext_drivers.a(ssp_18xx_43xx.o)
+ .debug_frame   0x000010ec       0x68 ./out/lib/ext_drivers.a(cr_startup_lpc43xx.o)
+ .debug_frame   0x00001154      0x41c ./out/lib/ext_drivers.a(clock_18xx_43xx.o)
+ .debug_frame   0x00001570       0x30 ./out/lib/ext_drivers.a(sysinit.o)
+ .debug_frame   0x000015a0       0x2c ./out/lib/ext_drivers.a(fpu_init.o)
+ .debug_frame   0x000015cc       0xd0 ./out/lib/ext_drivers.a(sysinit_18xx_43xx.o)
+ .debug_frame   0x0000169c      0x258 ./out/lib/drivers_bm.a(uart.o)
+ .debug_frame   0x000018f4      0x3d4 ./out/lib/ext_drivers.a(uart_18xx_43xx.o)
+ .debug_frame   0x00001cc8       0x2c c:/ciaa/cygwin/usr/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)

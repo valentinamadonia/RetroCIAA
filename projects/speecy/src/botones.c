@@ -5,7 +5,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "led.h"
-
+#include "ILI9341.h"
+#include "tm_stm32f4_fonts.h"
 
 void Inicializar_Botones(void )
 {
@@ -18,6 +19,7 @@ void Inicializar_Botones(void )
 	Chip_SCU_PinMux(BT4_MUX_GROUP,BT4_MUX_PIN,MD_PUP|MD_EZI|MD_ZI,FUNC0); /* BT4 */
 	Chip_SCU_PinMux(BT5_MUX_GROUP,BT5_MUX_PIN,MD_PUP|MD_EZI|MD_ZI,FUNC0); /* BT5 */
 	Chip_SCU_PinMux(BT6_MUX_GROUP,BT6_MUX_PIN,MD_PUP|MD_EZI|MD_ZI,FUNC0); /* BT6 */
+	Chip_SCU_PinMux(LED_MUX_GROUP,LED_MUX_PIN,MD_PUP|MD_EZI|MD_ZI,FUNC0); /* LED */
 	/* Define a los pines donde estan los SW como entradas */
 	//numero de puerto,numero de bit,entrada o salida
 	Chip_GPIO_SetDir(LPC_GPIO_PORT, BT1_GPIO_PORT, 1<<BT1_GPIO_PIN, ENTRADA);
@@ -26,56 +28,82 @@ void Inicializar_Botones(void )
 	Chip_GPIO_SetDir(LPC_GPIO_PORT, BT4_GPIO_PORT, 1<<BT4_GPIO_PIN, ENTRADA);
 	Chip_GPIO_SetDir(LPC_GPIO_PORT, BT5_GPIO_PORT, 1<<BT5_GPIO_PIN, ENTRADA);
 	Chip_GPIO_SetDir(LPC_GPIO_PORT, BT6_GPIO_PORT, 1<<BT6_GPIO_PIN, ENTRADA);
+	Chip_GPIO_SetDir(LPC_GPIO_PORT, LED_GPIO_PORT, 1<<LED_GPIO_PIN, SALIDA);
  }
 
-bool Leer_Estado_Boton(uint8_t tecla)
+void Prender_Led(void)
  {
-	 int dato=0;
-	 switch(tecla)
-	 {
-	 case BT1:
-		 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT1_GPIO_PORT,BT1_GPIO_PIN);
-		 break;
-	 case BT2:
-		 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT2_GPIO_PORT,BT2_GPIO_PIN);
-		 break;
-	 case BT3:
-		 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT3_GPIO_PORT,BT3_GPIO_PIN);
-		 break;
-	 case BT4:
-		 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT4_GPIO_PORT,BT4_GPIO_PIN);
-		 break;
-	 case BT5:
-	 	 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT5_GPIO_PORT,BT5_GPIO_PIN);
-	 	 break;
-	 case BT6:
-	 	 dato=Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, BT6_GPIO_PORT,BT6_GPIO_PIN);
-	 	 break;
-	 default:
-		 break;
-	 }
-	 return dato;
+		Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, LED_GPIO_PORT, LED_GPIO_PIN);
  }
 
-unsigned char UpdateBotones(){
+void Apagar_Led(void)
+ {
+		Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, LED_GPIO_PORT, LED_GPIO_PIN);
+ }
+
+unsigned char UpdateBotonesOpcion1(){
 	 unsigned char tecla;
 	 if (!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT1_GPIO_PORT,BT1_GPIO_PIN)){
-		 tecla = 'A'; //abajo
+		 tecla = 'Q'; //abajo
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT2_GPIO_PORT,BT2_GPIO_PIN)){
-	 	tecla = 'UP'; //RIGTH no hay xq
+	 	tecla = 'O'; //RIGTH no hay xq
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT3_GPIO_PORT,BT3_GPIO_PIN)){
-		 tecla = 'O';//left
+		 tecla = 'UP'; //left
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
-		 tecla = 'Q'; //arriba
+		 tecla = 'A'; //arriba
 	 }
-	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
-		 tecla = 'O';
+	 /*if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+		 tecla = '1'; //se usa para reiniciar juego
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
-		 tecla = 'I';
-	 }
+		 tecla = '0';
+	 }*/
 	 return tecla;
  }
+
+unsigned char UpdateBotonesOpcion2(){
+	 unsigned char tecla;
+	 if (!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT1_GPIO_PORT,BT1_GPIO_PIN)){
+		 tecla = 'Q'; //abajo
+	 }
+	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT2_GPIO_PORT,BT2_GPIO_PIN)){
+	 	tecla = 'O'; //RIGTH no hay xq
+	 }
+	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT3_GPIO_PORT,BT3_GPIO_PIN)){
+		 tecla = 'UP'; //left
+	 }
+	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
+		 tecla = 'A'; //arriba
+	 }
+	 /*if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+		 tecla = '1'; //se usa para reiniciar juego
+	 }
+	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
+		 tecla = '0';
+	 }*/
+	 return tecla;
+ }
+
+int Menu(void){
+	char *str= "RETRO CIAA";
+	TM_ILI9341_Puts(80,20,str,&TM_Font_16x26, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
+	TM_ILI9341_DrawLine(2, 50, 319, 50, ILI9341_COLOR_MAGENTA);
+	TM_ILI9341_DrawLine(2, 52, 319, 52, ILI9341_COLOR_MAGENTA);
+	TM_ILI9341_Puts(75,75,"01-Pacman",&TM_Font_11x18, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
+	TM_ILI9341_Puts(75,105,"02-OtroJuego",&TM_Font_11x18, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
+	str= "by Guerrero, Madonia, Santana";
+	TM_ILI9341_Puts(110,230,str,&TM_Font_7x10, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
+	int option=0;
+	while(option==0){
+		if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
+			option=1;
+		}
+		if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+			option=2;
+		}
+	}
+	return option;
+}

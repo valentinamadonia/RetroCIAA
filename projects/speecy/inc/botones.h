@@ -2,6 +2,7 @@
 #define BOTONES_H_
 
 #define ENTRADA 0
+#define SALIDA 1
 
 #define BT1_MUX_GROUP     6		//BT1 = GPIO7 : pin38
 #define BT1_MUX_PIN       11
@@ -33,18 +34,23 @@
 #define BT6_GPIO_PORT     3
 #define BT6_GPIO_PIN      6
 
-#define BT1 1<<BT1_GPIO_PIN
-#define BT2 1<<BT2_GPIO_PIN
-#define BT3 1<<BT3_GPIO_PIN
-#define BT4 1<<BT4_GPIO_PIN
-#define BT5 1<<BT5_GPIO_PIN
-#define BT6 1<<BT6_GPIO_PIN
+#define LED_MUX_GROUP     6		//LED = GPIO6 : pin35
+#define LED_MUX_PIN       4
+#define LED_GPIO_PORT     3
+#define LED_GPIO_PIN      3
+
+
 
 void Inicializar_Botones(void);
 
-bool Leer_Estado_Boton(uint8_t tecla);
+void Prender_Led(void);
 
-unsigned char UpdateBotones(void);
+void Apagar_Led(void);
 
+unsigned char UpdateBotonesOpcion1(void);
+
+unsigned char UpdateBotonesOpcion2(void);
+
+int Menu(void);
 
 #endif

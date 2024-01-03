@@ -28,7 +28,7 @@
 #include "graphics.h"
 #include "botones.h"
 #include "led.h"
-
+#include "v_alleg.h"
 
 tipo_emuopt emuopt = {"\0","\0","\0",GS_INACTIVE, 0,'n',{'o', 'p', 'q', 'a', ' '} };
 
@@ -53,7 +53,7 @@ int debug = 0, main_tecla, hay_tecla, scanl = 0, quit_thread = 0;
 
 void ExitEmulator (void);
 void CreateVideoTables (void);
-void UpdateKeyboard (void);
+void UpdateKeyboard (int);
 void target_incrementor (void);
 void count_frames (void);
 
@@ -92,17 +92,37 @@ int main (void)
 
   Z80Initialization ();
 
-  load_sna(&spectrumZ80);
+  //load_sna(&spectrumZ80);
 
   init_UART_FTDI_EDUCIAA();									/* Inicialización UART_FTDI y */
   Inicializar_Botones();
   ClearScreen (7);
   hay_tecla = main_tecla = 0;
   init_keyboard();
-
-
+  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
+  Prender_Led();
+  option = Menu();
+  ClearScreen (7);
+  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
+  load_sna(&spectrumZ80,option);
   while (1)									// main emulator loop
     {
+
+	  if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+		  ClearScreen (7);
+		  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
+		  load_sna(&spectrumZ80,option);
+	  } //reinicio de juego
+
+	  if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
+		  ClearScreen (7);
+		  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
+		  option = Menu();
+		  ClearScreen (7);
+		  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
+		  load_sna(&spectrumZ80,option);
+	  } //menu
+
 	  f_flash2++;
 	  if (f_flash2 >= 32)
 	    f_flash2 = 0;
@@ -162,8 +182,7 @@ int main (void)
 
 	  target_cycle--;
 	  frame_counter++;
-	  //UpdateBotones();
-	  UpdateKeyboard ();
+	  UpdateKeyboard(option);
       tecla = 0;
 
     }				// main emulator loop

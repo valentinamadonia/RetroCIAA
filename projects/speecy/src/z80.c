@@ -36,6 +36,7 @@
 #include "mem.h"
 #include "macros.h"
 #include "snafile_pacman.h"
+#include "snafile_Commando.h"
 
 /* RAM variable, debug toggle variable, pressed key and
    row variables for keyboard emulation                   */
@@ -466,47 +467,91 @@ Z80FlagTables (void)
 
 // CARGAR SNA
 
-void load_sna(Z80Regs *regs)
+void load_sna(Z80Regs *regs, int option)
 {
-// Load Z80 registers from SNA
-   regs->I        = snafile[ 0];
-   regs->HLs.B.l  = snafile[ 1];
-   regs->HLs.B.h  = snafile[ 2];
-   regs->DEs.B.l  = snafile[ 3];
-   regs->DEs.B.h  = snafile[ 4];
-   regs->BCs.B.l  = snafile[ 5];
-   regs->BCs.B.h  = snafile[ 6];
-   regs->AFs.B.l  = snafile[ 7];
-   regs->AFs.B.h  = snafile[ 8];
-   regs->HL.B.l   = snafile[ 9];
-   regs->HL.B.h   = snafile[10];
-   regs->DE.B.l   = snafile[11];
-   regs->DE.B.h   = snafile[12];
-   regs->BC.B.l   = snafile[13];
-   regs->BC.B.h   = snafile[14];
-   regs->IY.B.l = snafile[15];
-   regs->IY.B.h = snafile[16];
-   regs->IX.B.l = snafile[17];
-   regs->IX.B.h = snafile[18];
-   regs->IFF1 = regs->IFF2 = (snafile[19]&0x04) >>2;
-   regs->R.W  = snafile[20];
-   regs->AF.B.l = snafile[21];
-   regs->AF.B.h = snafile[22];
-   regs->SP.B.l =snafile[23];
-   regs->SP.B.h =snafile[24];
-   regs->IM = snafile[25];
-   regs->BorderColor = snafile[26];
+	// Load Z80 registers from SNA
+	if(option == 1){
+	   regs->I        = snafile[ 0];
+   	   regs->HLs.B.l  = snafile[ 1];
+   	   regs->HLs.B.h  = snafile[ 2];
+   	   regs->DEs.B.l  = snafile[ 3];
+   	   regs->DEs.B.h  = snafile[ 4];
+   	   regs->BCs.B.l  = snafile[ 5];
+   	   regs->BCs.B.h  = snafile[ 6];
+   	   regs->AFs.B.l  = snafile[ 7];
+   	   regs->AFs.B.h  = snafile[ 8];
+   	   regs->HL.B.l   = snafile[ 9];
+   	   regs->HL.B.h   = snafile[10];
+   	   regs->DE.B.l   = snafile[11];
+   	   regs->DE.B.h   = snafile[12];
+   	   regs->BC.B.l   = snafile[13];
+   	   regs->BC.B.h   = snafile[14];
+   	   regs->IY.B.l = snafile[15];
+   	   regs->IY.B.h = snafile[16];
+   	   regs->IX.B.l = snafile[17];
+   	   regs->IX.B.h = snafile[18];
+   	   regs->IFF1 = regs->IFF2 = (snafile[19]&0x04) >>2;
+   	   regs->R.W  = snafile[20];
+   	   regs->AF.B.l = snafile[21];
+   	   regs->AF.B.h = snafile[22];
+   	   regs->SP.B.l =snafile[23];
+   	   regs->SP.B.h =snafile[24];
+   	   regs->IM = snafile[25];
+   	   regs->BorderColor = snafile[26];
 
-  // load RAM from SNA
-   int direc;
-   for (direc=0;direc!=0xbfff;direc++)
+   	   // load RAM from SNA
+   	   int direc;
+   	   for (direc=0;direc!=0xbfff;direc++)
 	   {
-	   writemem(direc+0x4000, snafile[(27+direc)]);
-	   }
+	   	writemem(direc+0x4000, snafile[(27+direc)]);
+	   	}
 
-  // SP to PC for SNA run
-   regs->PC.B.l = Z80MemRead(regs->SP.W, regs);
-   regs->SP.W++;
-   regs->PC.B.h = Z80MemRead(regs->SP.W, regs);
-   regs->SP.W++;
+   	   	  // SP to PC for SNA run
+   	   regs->PC.B.l = Z80MemRead(regs->SP.W, regs);
+   	   regs->SP.W++;
+   	   regs->PC.B.h = Z80MemRead(regs->SP.W, regs);
+   	   regs->SP.W++;
+	}else{
+	   regs->I        = snafileB[ 0];
+	   regs->HLs.B.l  = snafileB[ 1];
+	   regs->HLs.B.h  = snafileB[ 2];
+	   regs->DEs.B.l  = snafileB[ 3];
+	   regs->DEs.B.h  = snafileB[ 4];
+	   regs->BCs.B.l  = snafileB[ 5];
+	   regs->BCs.B.h  = snafileB[ 6];
+	   regs->AFs.B.l  = snafileB[ 7];
+	   regs->AFs.B.h  = snafileB[ 8];
+	   regs->HL.B.l   = snafileB[ 9];
+	   regs->HL.B.h   = snafileB[10];
+	   regs->DE.B.l   = snafileB[11];
+	   regs->DE.B.h   = snafileB[12];
+	   regs->BC.B.l   = snafileB[13];
+	   regs->BC.B.h   = snafileB[14];
+	   regs->IY.B.l = snafileB[15];
+	   regs->IY.B.h = snafileB[16];
+	   regs->IX.B.l = snafileB[17];
+	   regs->IX.B.h = snafileB[18];
+	   regs->IFF1 = regs->IFF2 = (snafileB[19]&0x04) >>2;
+	   regs->R.W  = snafileB[20];
+	   regs->AF.B.l = snafileB[21];
+	   regs->AF.B.h = snafileB[22];
+	   regs->SP.B.l =snafileB[23];
+	   regs->SP.B.h =snafileB[24];
+	   regs->IM = snafileB[25];
+	   regs->BorderColor = snafileB[26];
+
+	  // load RAM from SNA
+	   int direc;
+	   for (direc=0;direc!=0xbfff;direc++)
+		   {
+		   writemem(direc+0x4000, snafileB[(27+direc)]);
+		   }
+
+	  // SP to PC for SNA run
+	   regs->PC.B.l = Z80MemRead(regs->SP.W, regs);
+	   regs->SP.W++;
+	   regs->PC.B.h = Z80MemRead(regs->SP.W, regs);
+	   regs->SP.W++;
+
+	}
 }
