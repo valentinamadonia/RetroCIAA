@@ -8,6 +8,9 @@
 #include "ILI9341.h"
 #include "tm_stm32f4_fonts.h"
 
+int start = 0;
+
+
 void Inicializar_Botones(void )
 {
 	Chip_GPIO_Init(LPC_GPIO_PORT);
@@ -44,16 +47,16 @@ void Apagar_Led(void)
 unsigned char UpdateBotonesOpcion1(){
 	 unsigned char tecla;
 	 if (!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT1_GPIO_PORT,BT1_GPIO_PIN)){
-		 tecla = 'Q'; //abajo
+		 tecla = 'Q'; //arriba
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT2_GPIO_PORT,BT2_GPIO_PIN)){
-	 	tecla = 'O'; //RIGTH no hay xq
+	 	tecla = 'O'; // izquierda
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT3_GPIO_PORT,BT3_GPIO_PIN)){
-		 tecla = 'UP'; //left
+		 tecla = 'UP'; // derecha
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
-		 tecla = 'A'; //arriba
+		 tecla = 'A'; //abajo
 	 }
 	 /*if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
 		 tecla = '1'; //se usa para reiniciar juego
@@ -66,24 +69,22 @@ unsigned char UpdateBotonesOpcion1(){
 
 unsigned char UpdateBotonesOpcion2(){
 	 unsigned char tecla;
+
 	 if (!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT1_GPIO_PORT,BT1_GPIO_PIN)){
-		 tecla = 'Q'; //abajo
+		 tecla = 'A'; // adelante
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT2_GPIO_PORT,BT2_GPIO_PIN)){
-	 	tecla = 'O'; //RIGTH no hay xq
+	 	tecla = 'Z'; // cambio de posicion
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT3_GPIO_PORT,BT3_GPIO_PIN)){
-		 tecla = 'UP'; //left
+		 tecla = 'UP'; // tiros
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
-		 tecla = 'A'; //arriba
+			 tecla = 'Q'; // saltar
 	 }
-	 /*if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
-		 tecla = '1'; //se usa para reiniciar juego
+	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+		 tecla = '0'; // start
 	 }
-	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
-		 tecla = '0';
-	 }*/
 	 return tecla;
  }
 
@@ -93,7 +94,7 @@ int Menu(void){
 	TM_ILI9341_DrawLine(2, 50, 319, 50, ILI9341_COLOR_MAGENTA);
 	TM_ILI9341_DrawLine(2, 52, 319, 52, ILI9341_COLOR_MAGENTA);
 	TM_ILI9341_Puts(75,75,"01-Pacman",&TM_Font_11x18, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
-	TM_ILI9341_Puts(75,105,"02-OtroJuego",&TM_Font_11x18, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
+	TM_ILI9341_Puts(75,105,"02-Pentagram",&TM_Font_11x18, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
 	str= "by Guerrero, Madonia, Santana";
 	TM_ILI9341_Puts(110,230,str,&TM_Font_7x10, ILI9341_COLOR_MAGENTA, ILI9341_COLOR_BLACK);
 	int option=0;

@@ -36,7 +36,7 @@
 #include "mem.h"
 #include "macros.h"
 #include "snafile_pacman.h"
-#include "snafile_Commando.h"
+#include "snafile_Pentagram.h"
 
 /* RAM variable, debug toggle variable, pressed key and
    row variables for keyboard emulation                   */

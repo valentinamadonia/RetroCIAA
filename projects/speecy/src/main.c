@@ -108,11 +108,11 @@ int main (void)
   while (1)									// main emulator loop
     {
 
-	  if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
+	  if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN) && option == 1){
 		  ClearScreen (7);
 		  TM_ILI9341_Rotate(TM_ILI9341_Orientation_Landscape_1);
 		  load_sna(&spectrumZ80,option);
-	  } //reinicio de juego
+	  } //reinicio de juego para el pacman
 
 	  if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
 		  ClearScreen (7);
