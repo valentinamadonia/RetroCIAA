@@ -58,12 +58,6 @@ unsigned char UpdateBotonesOpcion1(){
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
 		 tecla = 'A'; //abajo
 	 }
-	 /*if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT5_GPIO_PORT,BT5_GPIO_PIN)){
-		 tecla = '1'; //se usa para reiniciar juego
-	 }
-	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT6_GPIO_PORT,BT6_GPIO_PIN)){
-		 tecla = '0';
-	 }*/
 	 return tecla;
  }
 
@@ -77,7 +71,7 @@ unsigned char UpdateBotonesOpcion2(){
 	 	tecla = 'Z'; // cambio de posicion
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT3_GPIO_PORT,BT3_GPIO_PIN)){
-		 tecla = 'UP'; // tiros
+		 tecla = 'UP'; // ataque
 	 }
 	 if(!Chip_GPIO_ReadPortBit(LPC_GPIO_PORT,BT4_GPIO_PORT,BT4_GPIO_PIN)){
 			 tecla = 'Q'; // saltar

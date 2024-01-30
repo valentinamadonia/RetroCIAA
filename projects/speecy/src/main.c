@@ -92,8 +92,6 @@ int main (void)
 
   Z80Initialization ();
 
-  //load_sna(&spectrumZ80);
-
   init_UART_FTDI_EDUCIAA();									/* Inicialización UART_FTDI y */
   Inicializar_Botones();
   ClearScreen (7);
